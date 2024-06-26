@@ -4,4 +4,13 @@ const serviceController = require("../controllers/serviceController");
 
 //Funções
 
+router
+    .route("/services")
+    .post((req,res) => serviceController.create(req, res));
+
+router.route("/services").get((req, res) => serviceController.getAll(req, res));
+
+router.route("")
+
 module.exports = router;
+
