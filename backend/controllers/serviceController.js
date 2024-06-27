@@ -33,11 +33,20 @@ getAll: async (req, res) =>  {
         const id = req.params.id;
         const service = await ServiceModel.findById(id);
 
+        if(!service) {
+            res.status(404).json({msg: "Serviço não encontrado."})
+            return;
+        }
+
         res.json(service);
     } catch (error) {
-        
+        console.log(error)
     }
-  }
+  },
+  delete: async(req, res) => {
+
+  },
+
 };
 
 module.exports = serviceController;
