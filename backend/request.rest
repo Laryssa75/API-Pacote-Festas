@@ -14,3 +14,48 @@ GET http://localhost:3000/api/services
 ###
 //precisa ajustar o id correto, a partir de um service criado
 GET http://localhost:3000/api/services/colocaroidaqui
+
+###
+//precisa ajustar o id correto, a partir de um service criado
+DELETE http://localhost:3000/api/services/colocaroidaqui
+
+###
+//precisa ajustar o id correto, a partir de um service criado
+PUT http://localhost:3000/api/services/colocaroidaqui
+Content-Type: application/json
+
+{
+    "name":"TESTE ATUALIZACAO",
+    "description": "Alguma descrição",
+    "price": 2500,
+    "image": "https://i.pinimg.com/564x/07/4e/8c/074e8c1aef0f02719ae2f82c3a02cf4e.jpg"
+}
+
+###
+POST http://localhost:3000/api/parties
+Content-Type: application/json
+
+{
+    "title": "Meu evento",
+    "author": "Matheus",
+    "description": "Uma festa de aniversário.",
+    "budget": 9000,
+    "image": "https://i.pinimg.com/564x/07/4e/8c/074e8c1aef0f02719ae2f82c3a02cf4e.jpg",
+    "services":[
+    {
+        "name":"Algum serviço 1",
+        "description": "Alguma descrição",
+        "price": 1400,
+        "image": "https://i.pinimg.com/564x/07/4e/8c/074e8c1aef0f02719ae2f82c3a02cf4e.jpg"
+    },
+    {
+        "name":"Algum serviço 2",
+        "description": "Alguma descrição",
+        "price": 1600,
+        "image": "https://i.pinimg.com/564x/07/4e/8c/074e8c1aef0f02719ae2f82c3a02cf4e.jpg"
+    }
+    ]
+}
+
+###
+GET http://localhost:3000/api/parties
